@@ -19,3 +19,6 @@ Route::get('/', function () {
 
 
 Route::middleware('auth')->get('/users', fn() => \App\Models\User::all());
+
+
+Route::post('/login', fn() => response()->json(request()));
